@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nairobi Guests</title>
+</head>
+<body>
+
+<h2>Welcome to the Reservation Page. Nairobi</h2>
+<h2>Here are the Guests</h2>
+<table>
+    <tr>
+        <td>Last Name</td>
+        <td>First Name</td>
+        <td>Email Address</td>
+        <td>Phone Number</td>
+    </tr>
+    <tr th:each="guest:${guests}">
+        <td th:text="${guest.lastName}">Last Name</td>
+        <td th:text="${guest.firstName}">First Name</td>
+        <td th:text="${guest.emailAddress}">Guest</td>
+        <td th:text="${guest.phoneNumber}">Guest</td>
+    </tr>
+</table>
+</body>
+</html>
